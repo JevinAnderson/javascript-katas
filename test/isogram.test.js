@@ -24,7 +24,7 @@ describe('#isIsogram()', function() {
         expect(response).to.be.a('boolean');
       });
 
-      it(`should determine if \`${test.args[0]}\` is an isogram`, function() {
+      it(`should determine that \`${test.args[0]}\` ${test.expected ? 'IS' : 'IS NOT'} an isogram`, function() {
         expect(response).to.equal(test.expected);
       });
 

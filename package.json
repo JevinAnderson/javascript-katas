@@ -7,10 +7,10 @@
     "mocha": "^4.0.1"
   },
   "scripts": {
+    "start": "npm run test:watch",
     "test": "mocha",
     "test:watch": "npm run test -- -w",
     "test:dna": "npm run test -- -w test/dna.test.js",
-    "test:hotpo": "npm run test -- -w test/hotpo.test.js",
     "test:isogram": "npm run test -- -w test/isogram.test.js",
     "test:memoize": "npm run test -- -w test/memoize.test.js",
     "test:walk": "npm run test -- -w test/walk.test.js"

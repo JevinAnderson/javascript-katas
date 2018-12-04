@@ -9,6 +9,8 @@ describe('#isValidWalk()', function() {
     { args: [['n', 'e', 'n', 'e', 's', 's', 's', 'w', 'w', 'n']], expected: true },
     { args: [['w','e','w','e','w','e','w','e','w','e','w','e']], expected: false },
     { args: [['w']], expected: false },
+    { args: [['w', 'e']], expected: false },
+    { args: [['n', 's', 'e', 'w']], expected: false },
     { args: [['n','n','n','s','n','s','n','s','n','s']], expected: false }    
   ];
 
@@ -22,7 +24,7 @@ describe('#isValidWalk()', function() {
         expect(response).to.be.a('boolean');
       });
 
-      it(`should determin if \`${JSON.stringify(test.args[0])}\` is a valid walk`, function() {
+      it(`should determin that \`${JSON.stringify(test.args[0])}\` ${test.expected ? 'IS' : 'IS NOT'} a valid walk`, function() {
         expect(response).to.equal(test.expected);
       });
 
