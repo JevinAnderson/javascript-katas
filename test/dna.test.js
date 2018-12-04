@@ -22,7 +22,7 @@ describe('#DNAStrand()', function() {
         expect(response).to.be.a('string');
       });
 
-      it('returns the corresponding sequence', function() {
+      it(`given \`${test.args[0]}\`, expected result should be \`${test.expected}\``, function() {
         expect(response).to.equal(test.expected);
       });
 
